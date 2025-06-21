@@ -26,6 +26,7 @@ body {
   opacity: 0.9;
 }
 
+/* Para pantallas grandes, usa la versión 16:9 */
 @media screen and (min-width: 769px) {
   #fondo-estrellado {
     background: url('assets/fondo-estrellas-16.9.png') center center / cover no-repeat;
@@ -44,7 +45,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;     /* 👈 IMPORTANTE: permite que lo que salga se vea */
+  overflow: visible;
   pointer-events: auto;
 }
 
@@ -54,61 +55,48 @@ body {
   height: 100%;
   display: block;
   transform-origin: center center;
-  transform: scale(1.2); /* duplica el tamaño interno */
+  transform: scale(1.2);
 }
-
-
-
 
 /* Ajuste móvil */
 @media screen and (max-width: 368px) {
-  /* 1) El contenedor ocupa EXACTAMENTE la pantalla */
   #contenedor-svg {
     width: 100vw !important;
     height: 100vh !important;
   }
-
-  /* 2) El SVG rellena ese contenedor y, si quieres,
-        le escalamos un poco más para ganarle espacio */
   #contenedor-svg > svg {
     width: 100%;
     height: 100%;
-    display: block;
-
-    /* Ajusta este scale() hasta que en móvil se vea grande
-       sin salirse de la pantalla. Por ejemplo: */
     transform-origin: center center;
-    transform: scale(1.5); /* aquí podrías probar 1.2, 2, 2.5… */
+    transform: scale(1.5);
   }
 }
 
+/* ---------- Animaciones generales ---------- */
 @keyframes brillo-suave {
   0%, 100% { filter: drop-shadow(0 0 12px #39ff14); }
   50%      { filter: drop-shadow(0 0 24px #39ff14); }
 }
 .brillante { animation: brillo-suave 4s ease-in-out infinite; }
+
 @keyframes respiracion-suave {
   0%, 100% { transform: translate(-50%, -50%) scale(1); }
   50%      { transform: translate(-50%, -50%) scale(1.02); }
 }
 .respirando { animation: respiracion-suave 5s ease-in-out infinite; }
 
-/* Modal */
+/* ---------- Modal ---------- */
 #modal-estrellas {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
-  display: flex;            /* visible por defecto…            */
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
 }
-
-/* …pero se oculta cuando lleva la clase */
-#modal-estrellas.oculto {   /* 👈 regla más específica */
-  display: none;
-}
+#modal-estrellas.oculto { display: none; }
 
 /* Contenido del modal */
 .modal-contenido {
@@ -142,38 +130,24 @@ body {
   color: #000;
 }
 
-@keyframes zoom-centro {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(12);
-    opacity: 0;
-  }
+/* ---------- Animación de las estrellas ---------- */
+@keyframes volar-centro {
+  /* Arranca en su estado original */
+  0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+
+  /* Llega al centro manteniendo opacidad */
+  90%  { transform: translate(var(--dx), var(--dy)) scale(var(--s)); opacity: 1; }
+
+  /* Pequeño fade-out al final */
+  100% { transform: translate(var(--dx), var(--dy)) scale(var(--s)); opacity: 0; }
 }
 
 .animar-estrella {
-  transform-origin: center center;
-  animation: zoom-centro 6s ease forwards;
-  z-index: 20;
-}
+  /* 👇 fill-box funciona mejor que view-box en la mayoría de navegadores */
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
 
-.pantalla-negra {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0;
-  animation: aparecerNegro 3s ease forwards;
-  z-index: 15;
-  pointer-events: none;
-}
-
-@keyframes aparecerNegro {
-  to {
-    opacity: 1;
-  }
+  animation: volar-centro 3.5s ease-out forwards;
+  pointer-events: none;                 /* ya no recibe clics */
+  will-change: transform, opacity;      /* optimización */
 }
