@@ -1,0 +1,145 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: white;
+  font-family: 'Helvetica', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fondo estrellado */
+#fondo-estrellado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/fondo-estrellas.png') center center / cover no-repeat;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* Contenedor del SVG */
+#contenedor-svg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;     /* 👈 IMPORTANTE: permite que lo que salga se vea */
+  pointer-events: auto;
+}
+
+
+/* Ajuste móvil */
+@media screen and (max-width: 768px) {
+  #contenedor-svg { width: 95vw; }
+}
+
+@keyframes brillo-suave {
+  0%, 100% { filter: drop-shadow(0 0 12px #39ff14); }
+  50%      { filter: drop-shadow(0 0 24px #39ff14); }
+}
+.brillante { animation: brillo-suave 4s ease-in-out infinite; }
+@keyframes respiracion-suave {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50%      { transform: translate(-50%, -50%) scale(1.02); }
+}
+.respirando { animation: respiracion-suave 5s ease-in-out infinite; }
+
+/* Modal */
+#modal-estrellas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;            /* visible por defecto…            */
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* …pero se oculta cuando lleva la clase */
+#modal-estrellas.oculto {   /* 👈 regla más específica */
+  display: none;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  background-color: #111;
+  border: 2px solid #39ff14;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+}
+
+/* Botones */
+.botones-estrellas {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.botones-estrellas button {
+  background: #222;
+  border: 1px solid #39ff14;
+  color: #39ff14;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.botones-estrellas button:hover {
+  background: #39ff14;
+  color: #000;
+}
+
+@keyframes zoom-centro {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(12);
+    opacity: 0;
+  }
+}
+
+.animar-estrella {
+  transform-origin: center center;
+  animation: zoom-centro 6s ease forwards;
+  z-index: 20;
+}
+
+.pantalla-negra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  animation: aparecerNegro 2s ease forwards;
+  z-index: 15;
+  pointer-events: none;
+}
+
+@keyframes aparecerNegro {
+  to {
+    opacity: 1;
+  }
+}
