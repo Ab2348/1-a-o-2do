@@ -24,44 +24,49 @@ document.addEventListener("DOMContentLoaded", () => {
     const estrella = document.querySelector(`.estrella-${numero}`);
     if (!estrella) return;
 
-    /* ---------- 1. Oculta el modal ---------- */
+    // 1. Oculta el modal
     modal.classList.add("oculto");
 
-    /* ---------- 2. Calcula vector y escala ---------- */
+    // 2. Calcula vector y escala (300% fijo)
     const rect = estrella.getBoundingClientRect();
+    const cx   = rect.left + rect.width  / 2;
+    const cy   = rect.top  + rect.height / 2;
+    const vx   = window.innerWidth  / 2;
+    const vy   = window.innerHeight / 2;
+    const dx   = vx - cx;
+    const dy   = vy - cy;
+    const s    = 3; // escala 300%
 
-    /* Centro de la estrella en píxeles */
-    const cx = rect.left + rect.width  / 2;
-    const cy = rect.top  + rect.height / 2;
-
-    /* Centro de la ventana */
-    const vx = window.innerWidth  / 2;
-    const vy = window.innerHeight / 2;
-
-    /* Traslación necesaria */
-    const dx = vx - cx;
-    const dy = vy - cy;
-
-    /* Escala destino: 60 % del lado menor del viewport */
-    const ladoObjetivo = Math.min(window.innerWidth, window.innerHeight) * 0.60;
-    const s = (ladoObjetivo / rect.width).toFixed(3);   // 3 decimales bastan
-
-    /* ---------- 3. Configura variables CSS ---------- */
     estrella.style.setProperty("--dx", `${dx}px`);
     estrella.style.setProperty("--dy", `${dy}px`);
     estrella.style.setProperty("--s",  s);
 
-    /* ---------- 4. Reinicia animación si ya se usó ---------- */
-    estrella.classList.remove("animar-estrella");
-    void estrella.offsetWidth;  // fuerza reflow
-    estrella.classList.add("animar-estrella");
+    // 3. Asegura estado limpio
+    estrella.style.display = ""; 
+    estrella.classList.remove("intro-estrella", "trasladar-estrella", "desaparecer-estrella");
 
-    /* ---------- 5. Cuando acabe, desaparece del DOM ---------- */
-    const fin = () => {
-      estrella.style.display = "none";
-      estrella.removeEventListener("animationend", fin);
-    };
-    estrella.addEventListener("animationend", fin, { once: true });
+    // 4. Etapa 1: shrink & restore
+    estrella.classList.add("intro-estrella");
+    estrella.addEventListener("animationend", function step2(e) {
+      if (e.animationName !== "intro-shrink-restore") return;
+      estrella.removeEventListener("animationend", step2);
+
+      // 5. Etapa 2: translación al centro + crecimiento
+      estrella.classList.remove("intro-estrella");
+      estrella.classList.add("trasladar-estrella");
+      estrella.addEventListener("animationend", function step3(e2) {
+        if (e2.animationName !== "trasladar-crecer") return;
+        estrella.removeEventListener("animationend", step3);
+
+        // 6. Etapa 3: fade-out
+        estrella.classList.remove("trasladar-estrella");
+        estrella.classList.add("desaparecer-estrella");
+        estrella.addEventListener("animationend", function step4() {
+          estrella.removeEventListener("animationend", step4);
+          estrella.style.display = "none";
+        }, { once: true });
+      }, { once: true });
+    }, { once: true });
   });
 });
 });
