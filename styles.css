@@ -32,8 +32,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;
-  height: 100vh;
+  width: 250vw;
+  height: 250vh;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -42,10 +42,38 @@ body {
   pointer-events: auto;
 }
 
+/* Mantiene width/height al 100% y aplica un scale */
+#contenedor-svg > svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform-origin: center center;
+  transform: scale(1.2); /* duplica el tamaño interno */
+}
+
+
+
 
 /* Ajuste móvil */
-@media screen and (max-width: 768px) {
-  #contenedor-svg { width: 95vw; }
+@media screen and (max-width: 368px) {
+  /* 1) El contenedor ocupa EXACTAMENTE la pantalla */
+  #contenedor-svg {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  /* 2) El SVG rellena ese contenedor y, si quieres,
+        le escalamos un poco más para ganarle espacio */
+  #contenedor-svg > svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    /* Ajusta este scale() hasta que en móvil se vea grande
+       sin salirse de la pantalla. Por ejemplo: */
+    transform-origin: center center;
+    transform: scale(1.5); /* aquí podrías probar 1.2, 2, 2.5… */
+  }
 }
 
 @keyframes brillo-suave {
@@ -133,7 +161,7 @@ body {
   height: 100%;
   background-color: black;
   opacity: 0;
-  animation: aparecerNegro 2s ease forwards;
+  animation: aparecerNegro 3s ease forwards;
   z-index: 15;
   pointer-events: none;
 }
