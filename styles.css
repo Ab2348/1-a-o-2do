@@ -132,22 +132,22 @@ body {
 
 /* ---------- Animación de las estrellas ---------- */
 @keyframes volar-centro {
-  /* Arranca en su estado original */
-  0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 1;
+  }
 
-  /* Llega al centro manteniendo opacidad */
-  90%  { transform: translate(var(--dx), var(--dy)) scale(var(--s)); opacity: 1; }
-
-  /* Pequeño fade-out al final */
-  100% { transform: translate(var(--dx), var(--dy)) scale(var(--s)); opacity: 0; }
+  100% {
+    transform: translate3d(var(--dx), var(--dy), 0) scale(var(--s));
+    opacity: 0;
+  }
 }
 
-.animar-estrella {
-  /* 👇 fill-box funciona mejor que view-box en la mayoría de navegadores */
-  transform-box: fill-box;
-  transform-origin: 50% 50%;
-
-  animation: volar-centro 3.5s ease-out forwards;
-  pointer-events: none;                 /* ya no recibe clics */
-  will-change: transform, opacity;      /* optimización */
+.clon-estrella {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  will-change: transform, opacity;
+  transform-origin: center center;
+  animation: volar-centro 3.5s cubic-bezier(0.3, 0, 0.8, 1) forwards;
 }
