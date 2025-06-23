@@ -130,13 +130,47 @@ body {
   color: #000;
 }
 
+#fade-global {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity 3s ease-in-out;
+}
+
+#fade-global.activo {
+  opacity: 1;
+}
+
+
+.contenido-dinamico {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: white;
+  z-index: 5;
+  position: relative;
+}
+
+.video-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+
 /* ---------- Animación de las estrellas ---------- */
 @keyframes volar-centro {
   /* Arranca en su estado original */
   0%   { transform: translate(0, 0) scale(1); opacity: 1; }
 
   /* Llega al centro manteniendo opacidad */
-  90%  { transform: translate(var(--dx), var(--dy)) scale(var(--s)); opacity: 1; }
+  60%  { transform: translate(var(--dx), var(--dy)) scale(var(--s)); opacity: 1; }
 
   /* Pequeño fade-out al final */
   100% { transform: translate(var(--dx), var(--dy)) scale(var(--s)); opacity: 0; }
@@ -147,7 +181,7 @@ body {
   transform-box: fill-box;
   transform-origin: 50% 50%;
 
-  animation: volar-centro 3.5s ease-out forwards;
+  animation: volar-centro 6.5s ease-in-out forwards;
   pointer-events: none;                 /* ya no recibe clics */
   will-change: transform, opacity;      /* optimización */
 }
