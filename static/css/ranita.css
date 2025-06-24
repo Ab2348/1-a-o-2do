@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body {
+  overflow-y: auto !important;
+  font-family: 'Chewy', cursive;
+  background-color: #f7f5ef;
+  padding: 2rem;
+}
+
+.lienzo-ranita {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.texto-carta p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.texto-carta em {
+  color: #6c4d96;
+}
+
+.texto-carta strong {
+  font-weight: bold;
+  color: #222;
+}
+
+.secuencia-contenido {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.secuencia-contenido img,
+.secuencia-contenido iframe {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
+.boton-volver {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.boton-volver a {
+  display: inline-block;
+  background-color: #6c4d96;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.boton-volver a:hover {
+  background-color: #54367a;
+}

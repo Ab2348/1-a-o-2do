@@ -1,12 +1,28 @@
 {
   "1": {
     "titulo": "Ranita luminosa",
-    "texto": "Este es un texto tierno para la ranita 1. Fue la primera en aparecer bajo la luna.",
-    "youtube": "https://www.youtube.com/embed/VIDEO_ID_1"
-  },
-  "2": {
-    "titulo": "Ranita viajera",
-    "texto": "La ranita 2 cruza galaxias en una burbuja interestelar.",
-    "youtube": "https://www.youtube.com/embed/VIDEO_ID_2"
+    "texto": "<p>Buenas noches, mi ranita hermosa.</p><p>Este va a ser un viaje por toda nuestra historia, o al menos gran parte de ella.</p><p>Me siento la persona más afortunada del mundo por tenerte a mi lado. Este año ha estado increíblemente poblado de todo tipo de emociones. Hemos tenido momentos increíbles, llenos de tanto amor que pensé que explotaría en algún momento; hemos tenido dificultades que nos pusieron a temblar más de una vez. Pero de alguna manera, logramos entendernos, amarnos y perdonarnos.</p><p>Te amo con cada célula, con cada molécula de aire que entra a mi cuerpo. Eres la mujer que yo quería en mi vida y de eso no me queda ni una sola gota de duda.</p><p>No me quiero extender demasiado durante esta introducción porque aún nos queda un viaje por las estrellas largo por recorrer, y yo te voy llevando de la mano, mi ranita preciosa. Este, ten por seguro, será el primero de <strong>MUCHÍSIMOS</strong> aniversarios juntos.</p><p><em>Feliz aniversario, mi ranita divina.</em></p>",
+    "audio": "media/audio/Bleached.mp4",
+    "secuencia": [
+
+      {
+        "tipo": "video",
+        "src": "https://www.youtube.com/embed/VIDEO_ID_1"
+      },
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/estrella1-img7.jpg",
+        "alt": "Jugando juntos por primera vez"
+      },
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/estrella1-img11.jpg",
+        "alt": "Primera conversación especial"
+      },
+      {
+        "tipo": "video",
+        "src": "https://www.youtube.com/embed/VIDEO_ID_2"
+      }
+    ]
   }
 }
