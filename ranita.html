@@ -11,12 +11,23 @@
   <div id="fondo-estrellado"></div>
 
   <main id="contenedor-contenido" class="contenido-dinamico">
+    <!--
+      El contenido (wrapper, canvas y media-block) se inyecta dinámicamente
+      desde ranita.js al cargar la página.
+    -->
     <h1>Cargando ranita...</h1>
   </main>
-  
-<div class="boton-volver">
-  <a href="index.html">Volver al inicio</a>
-</div>
+
+  <!-- Controles para elegir layout -->
+  <div class="layout-controls">
+    <button data-change-layout="centrado">Layout Centrado</button>
+    <button data-change-layout="dos-columnas">Layout Dos Columnas</button>
+    <button data-change-layout="horizontal">Layout Horizontal</button>
+  </div>
+
+  <div class="boton-volver">
+    <a href="index.html">Volver al inicio</a>
+  </div>
 
   <script src="static/js/script.js"></script>
   <script src="static/js/ranita.js"></script>
