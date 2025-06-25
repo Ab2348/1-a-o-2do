@@ -1,11 +1,10 @@
-/* ranita.css */
+/* ESTILO PARCHADO */
 
 /* Tipografía y estilos globales */
 body {
   font-family: 'Chewy', cursive, 'Merriweather', serif;
-  background-color: #f9f9f9;
   margin: 0;
-  padding: 1rem;
+  padding: 2rem;
   overflow-y: auto;
   color: #333;
 }
@@ -21,14 +20,17 @@ a {
   left: 1rem;
 }
 .boton-volver a {
-  background-color: #ffcc00;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #6c4d96;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s ease;
 }
 .boton-volver a:hover {
-  background-color: #ffdd33;
+  background-color: #54367a;
 }
 
 /* ===========================
@@ -37,10 +39,10 @@ a {
 #contenedor-contenido.layout-centrado .lienzo-ranita {
   max-width: 800px;
   margin: 2rem auto;
-  background-color: rgba(255,255,255,0.8);
-  border-radius: 2xl;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 1.5rem;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,28 +50,32 @@ a {
 #contenedor-contenido.layout-centrado .texto-carta {
   width: 100%;
   margin-bottom: 1.5rem;
+  color: #3c1919;
 }
 #contenedor-contenido.layout-centrado .texto-carta p {
+  font-size: 1.1rem;
   text-align: justify;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 #contenedor-contenido.layout-centrado .texto-carta em {
-  color: #555;
+  color: #6c4d96;
 }
 #contenedor-contenido.layout-centrado .texto-carta strong {
   font-weight: bold;
+  color: #222;
 }
 #contenedor-contenido.layout-centrado .secuencia-contenido {
-  display: grid;
+  
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 #contenedor-contenido.layout-centrado .secuencia-contenido img,
 #contenedor-contenido.layout-centrado .secuencia-contenido iframe {
   width: 100%;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* ===========================
@@ -84,28 +90,28 @@ a {
   align-items: start;
 }
 #contenedor-contenido.layout-dos-columnas .columna-texto .lienzo-ranita.texto-solo {
-  background-color: rgba(255,255,255,0.8);
-  border-radius: 2xl;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 1.5rem;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
 }
 #contenedor-contenido.layout-dos-columnas .columna-texto .texto-solo p {
+  font-size: 1.1rem;
   text-align: justify;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 #contenedor-contenido.layout-dos-columnas .columna-media .secuencia-contenido.media-solo {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 #contenedor-contenido.layout-dos-columnas .media-solo img,
 #contenedor-contenido.layout-dos-columnas .media-solo iframe {
   width: 100%;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-/* Responsive: colapsa a una columna en pantallas pequeñas */
 @media (max-width: 768px) {
   #contenedor-contenido.layout-dos-columnas .layout-dos-columnas-contenedor {
     grid-template-columns: 1fr;
@@ -123,26 +129,44 @@ a {
   margin: 2rem auto;
 }
 #contenedor-contenido.layout-horizontal .texto-arriba .lienzo-ranita.texto-horizontal {
-  background-color: rgba(255,255,255,0.8);
-  border-radius: 2xl;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 1.5rem;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
   width: 100%;
 }
 #contenedor-contenido.layout-horizontal .texto-arriba p {
+  font-size: 1.1rem;
   text-align: justify;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   width: 100%;
+  margin-top: 2.5rem;
 }
 #contenedor-contenido.layout-horizontal .media-horizontal img,
 #contenedor-contenido.layout-horizontal .media-horizontal iframe {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
+/* Tamaño uniforme para imagen y video */
+.secuencia-contenido img,
+.secuencia-contenido iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Forzar altura visual uniforme en los iframes */
+.secuencia-contenido iframe {
+  height: 300px;
 }
