@@ -47,5 +47,38 @@
       "alt": "Mirándonos como antes"
     }
   ]
+},
+"3": {
+  "titulo": "Cómo nos volvimos a encontrar",
+  "texto": "<p>TEXTO DE PRUEBA TEXTO DE PRUEBA <strong>cómo fue que nos volvimos a conocer</strong> es bastante hermosa. Sin duda creo que es de las más hermosas que conozco, y no es porque sea nuestra ehhhh.</p>\n<p>Aún recuerdo ese sentimiento a la perfección: ver un reel extremadamente chistoso, pensar en ti como un “Quisiera volver a saber de ella” y <em>tomar el riesgo de mandártelo aun sin contexto de nada</em>. Sin duda, eso fue de lo que durante toda mi vida estaré agradecido por haber hecho.</p>\n<p>Cuando recién comenzamos a hablar, jamás me imaginé que estaríamos como estamos ahora: <strong>planeando una vida juntos</strong>, queriendo una familia tan hermosa como la que planeamos — dos niños, una niña hermosa, animalitos (tienen que haber animalitos, obvio).</p>\n<p>Es algo que jamás en mi vida creí que podríamos vivir, <strong>mi ranita preciosa</strong>.</p>",
+  "audio": "media/audio/Reencuentro.mp4",
+  "layout": "horizontal",
+  "secuencia": [
+    {
+      "tipo": "imagen",
+      "src": "media/fotos/estrella3-img1.jpg",
+      "alt": "El reel que lo inició todo"
+    },
+    {
+      "tipo": "imagen",
+      "src": "media/fotos/estrella3-img2.jpg",
+      "alt": "Nuestra primera charla tras años"
+    },
+    {
+      "tipo": "imagen",
+      "src": "media/fotos/estrella3-img3.jpg",
+      "alt": "Sueños de familia juntos"
+    },
+    {
+      "tipo": "imagen",
+      "src": "media/fotos/estrella3-img4.jpg",
+      "alt": "Imaginando a nuestros hijos"
+    },
+    {
+      "tipo": "imagen",
+      "src": "media/fotos/estrella3-img5.jpg",
+      "alt": "El amor que renació"
+    }
+  ]
 }
 }

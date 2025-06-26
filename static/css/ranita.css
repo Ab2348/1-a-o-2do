@@ -176,16 +176,17 @@ a {
   color: #222;
   font-weight: bold;
 }
+
 #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   gap: 2rem;
   width: 100%;
-  margin-top: 2.5rem;
+  justify-content: space-between;
 }
 #contenedor-contenido.layout-horizontal .media-horizontal img,
 #contenedor-contenido.layout-horizontal .media-horizontal iframe {
-  width: 100%;
+  width: calc((100% - (2rem * 4)) / 5); /* Para 5 imágenes, ajusta si cambian */
   height: auto;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -193,13 +194,10 @@ a {
 
 
 
-
 /* Tamaño uniforme para imagen y video */
 .secuencia-contenido img,
 .secuencia-contenido iframe {
-  aspect-ratio: 16 / 9;
   height: auto;
-  max-height: 300px;
   object-fit: cover;
 }
 
