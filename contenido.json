@@ -25,5 +25,27 @@
         "alt": "Primera conversación especial"
       }
     ]
-  }
+  },
+  "2": {
+  "titulo": "Un viaje con música",
+  "texto": "<p>Me gustaría que durante todo este viaje que tenemos por hacer, <strong>mi ranita espacial</strong>, pudieras sentir todo el amor que tengo.</p><p>Todo lo que me haces sentir. Lo especial que eres para mí.</p><p>Es eso por lo que he preparado este pequeño viaje por las estrellas, porque esta canción que está sonando ahora mismo, es <em>la primera canción que mi princesa me dedicó</em>, mi ranita me dedicó.</p><p>Quisiera que juntos vayamos recordando todas estas cosas que nos enamoraron, que nos hicieron permanecer, quiero volver a enamorarte cada día de mi vida.</p><p>Pero ¿sabes qué, mi ranita? Mejor comencemos por el inicio, vamos desde que éramos amigos. :3</p>",
+  "audio": "media/audio/PrimeraCancion.mp4",
+  "layout": "dos-columnas",
+  "secuencia": [
+    {
+      "tipo": "imagen",
+      "src": "media/fotos/estrella2-img1.jpg",
+      "alt": "Nuestra primera canción"
+    },
+    {
+      "tipo": "video",
+      "src": "media/canciones/love.mp4"
+    },
+    {
+      "tipo": "imagen",
+      "src": "media/fotos/estrella2-img2.jpg",
+      "alt": "Mirándonos como antes"
+    }
+  ]
+}
 }

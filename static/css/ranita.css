@@ -37,7 +37,7 @@ a {
    Layout 1: Centrado
    =========================== */
 #contenedor-contenido.layout-centrado .lienzo-ranita {
-  max-width: 800px;
+  max-width: 600px;
   margin: 2rem auto;
   background-color: rgba(255,255,255,0.9);
   border-radius: 2rem;
@@ -78,28 +78,51 @@ a {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+
 /* ===========================
    Layout 2: Dos columnas
    =========================== */
+
+/* 1. Override del ancho máximo sólo en layout-dos-columnas */
+#contenedor-contenido.layout-dos-columnas .contenido-dinamico {
+  max-width: 805px !important;
+}
+
+/* 2. Contenedor grid de dos columnas */
 #contenedor-contenido.layout-dos-columnas .layout-dos-columnas-contenedor {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1200px;    /* ancho máximo del grid interno */
   margin: 2rem auto;
   align-items: start;
 }
+
+/* 3. Ajuste visual completo del lienzo y corrección del ancho */
 #contenedor-contenido.layout-dos-columnas .columna-texto .lienzo-ranita.texto-solo {
   background-color: rgba(255,255,255,0.9);
   border-radius: 2rem;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   padding: 2.5rem;
+  color: #3c1919;
+  max-width: 805px !important;  /* opcional, refuerza que no supere el wrapper */
 }
+
+/* 4. Estilo de texto */
 #contenedor-contenido.layout-dos-columnas .columna-texto .texto-solo p {
   font-size: 1.1rem;
   text-align: justify;
   line-height: 1.8;
 }
+#contenedor-contenido.layout-dos-columnas .columna-texto .texto-solo em {
+  color: #6c4d96;
+}
+#contenedor-contenido.layout-dos-columnas .columna-texto .texto-solo strong {
+  color: #222;
+  font-weight: bold;
+}
+
+/* 5. Sección multimedia */
 #contenedor-contenido.layout-dos-columnas .columna-media .secuencia-contenido.media-solo {
   display: grid;
   grid-template-columns: 1fr;
@@ -112,11 +135,16 @@ a {
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* 6. Adaptación responsive */
 @media (max-width: 768px) {
   #contenedor-contenido.layout-dos-columnas .layout-dos-columnas-contenedor {
     grid-template-columns: 1fr;
   }
 }
+
+
+
 
 /* ===========================
    Layout 3: Horizontal
@@ -134,11 +162,19 @@ a {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   padding: 2.5rem;
   width: 100%;
+  color: #3c1919;
 }
-#contenedor-contenido.layout-horizontal .texto-arriba p {
+#contenedor-contenido.layout-horizontal .texto-arriba .texto-horizontal p {
   font-size: 1.1rem;
   text-align: justify;
   line-height: 1.8;
+}
+#contenedor-contenido.layout-horizontal .texto-arriba .texto-horizontal em {
+  color: #6c4d96;
+}
+#contenedor-contenido.layout-horizontal .texto-arriba .texto-horizontal strong {
+  color: #222;
+  font-weight: bold;
 }
 #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
   display: grid;
@@ -154,6 +190,7 @@ a {
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 
 
 
