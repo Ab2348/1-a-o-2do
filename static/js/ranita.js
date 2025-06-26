@@ -1,115 +1,167 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const contenedor = document.getElementById("contenedor-contenido");
   const params = new URLSearchParams(window.location.search);
-  const numero = params.get("id");
+  const id = params.get("id");
 
-  if (!numero) {
-    contenedor.innerHTML = `<p>No se especificó qué ranita mostrar.</p>`;
+  if (!id) {
+    contenedor.innerHTML = "<p>Error: no se especificó una ranita.</p>";
     return;
   }
 
-  fetch("contenido.json")
-    .then(res => res.json())
-    .then(data => {
-      const ranita = data[numero];
-      if (!ranita) {
-        contenedor.innerHTML = `<p>No hay contenido para la ranita ${numero}.</p>`;
-        return;
-      }
+  let contenido;
+  try {
+    const resp = await fetch("contenido.json");
+    const data = await resp.json();
+    contenido = data[id];
+    if (!contenido) {
+      contenedor.innerHTML = "<p>Contenido no encontrado.</p>";
+      return;
+    }
+  } catch (err) {
+    console.error(err);
+    contenedor.innerHTML = "<p>Error cargando el contenido.</p>";
+    return;
+  }
 
-      // Audio de fondo
-      if (ranita.audio) {
+  // Audio de fondo
+  let audioFondo = null;
+  if (contenido.audio) {
     const audio = document.createElement("audio");
-    audio.src = ranita.audio;
-    audio.autoplay = true;
+    audio.src = contenido.audio;
     audio.loop = true;
-    audio.volume = 0.1; // ⬅️ volumen inicial reducido
+    audio.volume = 0.1;
     audio.style.display = "none";
     document.body.appendChild(audio);
-    document.body.addEventListener("click", () => audio.play(), { once: true });
-    }
+    document.addEventListener("click", () => {
+      if (audio.paused) audio.play();
+    }, { once: true });
+    audioFondo = audio;
+  }
 
-      // Generar contenido
-      const html = `
-        <div class="lienzo-ranita">
-          <div class="texto-carta">${ranita.texto}</div>
-          <div class="secuencia-contenido">
-            ${ranita.secuencia.map(item => {
-              if (item.tipo === "imagen") {
-                return `<img src="${item.src}" alt="${item.alt || ''}"/>`;
-              } else if (item.tipo === "video") {
-                return `<iframe src="${item.src}" allowfullscreen></iframe>`;
-              } else {
-                return '';
-              }
-            }).join('')}
+  // Asigna clase de layout al contenedor
+  // Valores permitidos: 'centrado', 'dos-columnas', 'horizontal'
+  const layout = contenido.layout || "centrado";
+  contenedor.classList.add(`layout-${layout}`);
+
+  // Construye el HTML según el layout seleccionado
+  let html = "";
+
+  if (layout === "centrado") {
+    html += `
+      <div class="lienzo-ranita">
+        <div class="texto-carta">
+          ${contenido.texto}
+        </div>
+        <div class="secuencia-contenido">
+          ${buildSecuencia(contenido.secuencia)}
+        </div>
+      </div>
+    `;
+  } else if (layout === "dos-columnas") {
+    html += `
+      <div class="layout-dos-columnas-contenedor">
+        <div class="columna-texto">
+          <div class="lienzo-ranita texto-solo">
+            ${contenido.texto}
           </div>
         </div>
-      `;
-      contenedor.innerHTML = html;
-    })
-    .catch(err => {
-      console.error(err);
-      contenedor.innerHTML = `<p>Error al cargar contenido.</p>`;
+        <div class="columna-media">
+          <div class="secuencia-contenido media-solo">
+            ${buildSecuencia(contenido.secuencia)}
+          </div>
+        </div>
+      </div>
+    `;
+  } else if (layout === "horizontal") {
+    html += `
+      <div class="layout-horizontal">
+        <div class="texto-arriba">
+          <div class="lienzo-ranita texto-horizontal">
+            ${contenido.texto}
+          </div>
+        </div>
+        <div class="media-abajo">
+          <div class="secuencia-contenido media-horizontal">
+            ${buildSecuencia(contenido.secuencia)}
+          </div>
+        </div>
+      </div>
+    `;
+  } else {
+    // Fallback a centrado si el layout es desconocido
+    html += `
+      <div class="lienzo-ranita">
+        <div class="texto-carta">
+          ${contenido.texto}
+        </div>
+        <div class="secuencia-contenido">
+          ${buildSecuencia(contenido.secuencia)}
+        </div>
+      </div>
+    `;
+  }
+
+  contenedor.innerHTML = html;
+
+  // Carga API de YouTube
+  loadYouTubeAPI();
+
+  // Variables para controlar volumen
+  const players = [];
+  window.onYouTubeIframeAPIReady = () => {
+    const iframes = Array.from(document.querySelectorAll("iframe"));
+    iframes.forEach((iframe, i) => {
+      if (!iframe.src.includes("youtube.com")) return;
+      players[i] = new YT.Player(iframe, {
+        events: { onStateChange: onPlayerStateChange }
+      });
     });
-  // Cargar API de YouTube
-const tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-document.body.appendChild(tag);
+  };
 
-let audioFondo = null;
-let players = [];
-
-// Guardar referencia al audio
-document.querySelectorAll("audio").forEach(a => audioFondo = a);
-
-    // Esta función la llama automáticamente la API de YouTube cuando esté lista
-    window.onYouTubeIframeAPIReady = function () {
-    const iframes = document.querySelectorAll("iframe[src*='youtube.com']");
-
-    iframes.forEach((iframe, index) => {
-        const player = new YT.Player(iframe, {
-        events: {
-            'onStateChange': onPlayerStateChange
-        }
-        });
-        players.push(player);
-    });
-    };
-
-    function onPlayerStateChange(event) {
+  function onPlayerStateChange(event) {
     if (!audioFondo) return;
-
-    // 1 = playing, 2 = paused
-    if (event.data === YT.PlayerState.PLAYING) {
-        bajarVolumenSuave(audioFondo, 0.1);
-    } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
-        subirVolumenSuave(audioFondo, 0.3);
+    const estado = event.data;
+    if (estado === YT.PlayerState.PLAYING) {
+      bajarVolumenSuave();
+    } else if (
+      estado === YT.PlayerState.PAUSED ||
+      estado === YT.PlayerState.ENDED
+    ) {
+      subirVolumenSuave();
     }
-    }
+  }
 
-    // Suavizar bajada de volumen
-    function bajarVolumenSuave(audio, target) {
-    const step = 0.01;
-    const interval = setInterval(() => {
-        if (audio.volume > target) {
-        audio.volume = Math.max(target, audio.volume - step);
+  function bajarVolumenSuave() {
+    if (audioFondo.volume > 0.1) {
+      audioFondo.volume = Math.max(0.1, audioFondo.volume - 0.01);
+      setTimeout(bajarVolumenSuave, 50);
+    }
+  }
+
+  function subirVolumenSuave() {
+    if (audioFondo.volume < 0.3) {
+      audioFondo.volume = Math.min(0.3, audioFondo.volume + 0.01);
+      setTimeout(subirVolumenSuave, 50);
+    }
+  }
+
+  function buildSecuencia(secuencia = []) {
+    return secuencia
+      .map(item => {
+        if (item.tipo === "imagen") {
+          return `<img src="${item.src}" alt="${item.alt || ""}" />`;
+        } else if (item.tipo === "video") {
+          return `<iframe src="${item.src}" title="${item.titulo || ""}" frameborder="0" allowfullscreen></iframe>`;
         } else {
-        clearInterval(interval);
+          return "";
         }
-    }, 50);
-    }
+      })
+      .join("");
+  }
 
-    // Suavizar subida de volumen
-    function subirVolumenSuave(audio, target) {
-    const step = 0.01;
-    const interval = setInterval(() => {
-        if (audio.volume < target) {
-        audio.volume = Math.min(target, audio.volume + step);
-        } else {
-        clearInterval(interval);
-        }
-    }, 50);
-    }
-
+  function loadYouTubeAPI() {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+  }
 });

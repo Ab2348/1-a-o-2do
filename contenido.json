@@ -3,11 +3,12 @@
     "titulo": "Ranita luminosa",
     "texto": "<p>Buenas noches, mi ranita hermosa.</p><p>Este va a ser un viaje por toda nuestra historia, o al menos gran parte de ella.</p><p>Me siento la persona más afortunada del mundo por tenerte a mi lado. Este año ha estado increíblemente poblado de todo tipo de emociones. Hemos tenido momentos increíbles, llenos de tanto amor que pensé que explotaría en algún momento; hemos tenido dificultades que nos pusieron a temblar más de una vez. Pero de alguna manera, logramos entendernos, amarnos y perdonarnos.</p><p>Te amo con cada célula, con cada molécula de aire que entra a mi cuerpo. Eres la mujer que yo quería en mi vida y de eso no me queda ni una sola gota de duda.</p><p>No me quiero extender demasiado durante esta introducción porque aún nos queda un viaje por las estrellas largo por recorrer, y yo te voy llevando de la mano, mi ranita preciosa. Este, ten por seguro, será el primero de <strong>MUCHÍSIMOS</strong> aniversarios juntos.</p><p><em>Feliz aniversario, mi ranita divina.</em></p>",
     "audio": "media/audio/Bleached.mp4",
+    "layout": "centrado",
     "secuencia": [
 
       {
         "tipo": "video",
-        "src": "https://www.youtube.com/embed/VIDEO_ID_1"
+        "src": "https://www.youtube.com/embed/GHlztH9aEu0"
       },
       {
         "tipo": "imagen",
@@ -15,14 +16,36 @@
         "alt": "Jugando juntos por primera vez"
       },
       {
+        "tipo": "video",
+        "src": "https://www.youtube.com/embed/R1xsFo1RYTA"
+      },
+      {
         "tipo": "imagen",
         "src": "media/fotos/estrella1-img11.jpg",
         "alt": "Primera conversación especial"
-      },
-      {
-        "tipo": "video",
-        "src": "https://www.youtube.com/embed/VIDEO_ID_2"
       }
     ]
-  }
+  },
+  "2": {
+  "titulo": "Un viaje con música",
+  "texto": "<p>Me gustaría que durante todo este viaje que tenemos por hacer, <strong>mi ranita espacial</strong>, pudieras sentir todo el amor que tengo.</p><p>Todo lo que me haces sentir. Lo especial que eres para mí.</p><p>Es eso por lo que he preparado este pequeño viaje por las estrellas, porque esta canción que está sonando ahora mismo, es <em>la primera canción que mi princesa me dedicó</em>, mi ranita me dedicó.</p><p>Quisiera que juntos vayamos recordando todas estas cosas que nos enamoraron, que nos hicieron permanecer, quiero volver a enamorarte cada día de mi vida.</p><p>Pero ¿sabes qué, mi ranita? Mejor comencemos por el inicio, vamos desde que éramos amigos. :3</p>",
+  "audio": "media/audio/PrimeraCancion.mp4",
+  "layout": "dos-columnas",
+  "secuencia": [
+    {
+      "tipo": "imagen",
+      "src": "media/fotos/estrella2-img1.jpg",
+      "alt": "Nuestra primera canción"
+    },
+    {
+      "tipo": "video",
+      "src": "media/canciones/love.mp4"
+    },
+    {
+      "tipo": "imagen",
+      "src": "media/fotos/estrella2-img2.jpg",
+      "alt": "Mirándonos como antes"
+    }
+  ]
+}
 }
