@@ -48,37 +48,137 @@
     }
   ]
 },
-"3": {
-  "titulo": "Cómo nos volvimos a encontrar",
-  "texto": "<p>TEXTO DE PRUEBA TEXTO DE PRUEBA <strong>cómo fue que nos volvimos a conocer</strong> es bastante hermosa. Sin duda creo que es de las más hermosas que conozco, y no es porque sea nuestra ehhhh.</p>\n<p>Aún recuerdo ese sentimiento a la perfección: ver un reel extremadamente chistoso, pensar en ti como un “Quisiera volver a saber de ella” y <em>tomar el riesgo de mandártelo aun sin contexto de nada</em>. Sin duda, eso fue de lo que durante toda mi vida estaré agradecido por haber hecho.</p>\n<p>Cuando recién comenzamos a hablar, jamás me imaginé que estaríamos como estamos ahora: <strong>planeando una vida juntos</strong>, queriendo una familia tan hermosa como la que planeamos — dos niños, una niña hermosa, animalitos (tienen que haber animalitos, obvio).</p>\n<p>Es algo que jamás en mi vida creí que podríamos vivir, <strong>mi ranita preciosa</strong>.</p>",
-  "audio": "media/audio/Reencuentro.mp4",
-  "layout": "horizontal",
+  "3": {
+    "titulo": "Cómo nos volvimos a encontrar",
+    "texto": "<p>La verdad, la historia de como nos conocimos, o más bien <strong>cómo fue que nos volvimos a conocer</strong> es bastante hermosa. Sin duda creo que es de las más hermosas que conozco, y no es porque sea nuestra ehhhh.</p>\n<p>Aún recuerdo ese sentimiento a la perfección: ver un reel extremadamente chistoso, pensar en ti como un “Quisiera volver a saber de ella” y <em>tomar el riesgo de mandártelo aun sin contexto de nada</em>. Sin duda, eso fue de lo que durante toda mi vida estaré agradecido por haber hecho.</p>\n<p>Cuando recién comenzamos a hablar, jamás me imaginé que estaríamos como estamos ahora: <strong>planeando una vida juntos</strong>, queriendo una familia tan hermosa como la que planeamos — dos niños, una niña hermosa, animalitos (tienen que haber animalitos, obvio).</p>\n<p>Es algo que jamás en mi vida creí que podríamos vivir, <strong>mi ranita preciosa</strong>.</p>",
+    "layout": "horizontal",
+    "secuencia": [
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/estrella3-img1.jpg",
+        "alt": "El reel que lo inició todo"
+      },
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/estrella3-img2.jpg",
+        "alt": "Nuestra primera charla tras años"
+      },
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/estrella3-img3.jpg",
+        "alt": "Sueños de familia juntos"
+      },
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/estrella3-img4.jpg",
+        "alt": "Imaginando a nuestros hijos"
+      },
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/llamadas-2.jpg",
+        "alt": "El amor que renació"
+      }
+    ]
+  }, 
+  "4": {
+    "titulo": "Cómo nació lo nuestro",
+    "texto": "<p>Retomando un poco cómo fue que recién comenzamos a hablar, la verdad es que recuerdo con muchísimo amor, ranita, todo lo que me llevó a darme cuenta de que no solo te quería como amiga… sino que también te quería como algo más.</p><p>Dentro de mí empezaba a nacer un cariño muy especial que no sabía cómo nombrar en ese momento, pero que hoy sé, con todo mi corazón, que era el amor más puro y grande que he sentido por alguien.</p><p>Durante esa primera etapa, que todavía no era “una relación”, compartimos tantas cosas. Teníamos esas llamadas larguísimas que parecían no tener fin, incluso de días completos. Jugábamos, reíamos sin parar tú y yo, y muchas veces también con Axel. Pasábamos 24, 48, hasta 72 horas en llamada sin darnos cuenta. El tiempo simplemente desaparecía cuando estaba contigo.</p><p>Y en medio de todo eso, empezaron a salir las primeras señales. Nos decíamos cosas bonitas, nos tirábamos algún piropo o alguna indirecta, y los dos nos chiveábamos. A veces pensábamos que estábamos alucinando, que solo era parte del juego o de nuestra manera de hablarnos… pero en el fondo, poco a poco, ya empezábamos a gustarnos de verdad.</p><p>No te voy a mentir, ranita. Yo tenía dudas. Dudaba si valía la pena arriesgar una amistad tan bonita, tan especial, por algo que aún no sabíamos si funcionaría. Me daba miedo perder lo que teníamos. Pero hoy no puedo estar más agradecido de que, a pesar de esas dudas, decidimos caminar juntos. Que decidimos construir esto, poquito a poquito, tal como lo hemos hecho desde entonces.</p><p>Y fue así, entre risas, juegos, ternura y un montón de horas a través del monitor … como nació lo nuestro.</p>",
+    "layout": "dos-columnas",
+    "audio": "media/canciones/monitor.mp3",
+    "secuencia": [
+    {
+      "tipo": "video",
+      "src": "https://www.youtube.com/embed/nfTEXXB1oIY"
+    },
+    {
+      "tipo": "video",
+      "src": "https://www.youtube.com/embed/FSoBYm7Cfxw"
+    },
+    {
+      "tipo": "video",
+      "src": "https://www.youtube.com/embed/pgGOUZWxnCY"
+    },
+    {
+      "tipo": "video",
+      "src": "https://www.youtube.com/embed/mZAWfjvcOXI"
+    }
+  ]
+  },
+  "5": {
+  "titulo": "Nuestra primera vez en persona",
+  "texto": "<p>Después de tantas horas juntos a través del monitor, de compartir risas, juegos, llamadas y palabras cada vez más bonitas… llegó el momento de vernos por primera vez. De vernos de verdad, frente a frente, fuera de las pantallas.</p><p>Nuestra primera salida fue muchas cosas al mismo tiempo. Estaba emocionado, nervioso, feliz, con la cabeza llena de ideas y el corazón acelerado. Recuerdo cómo intentaba actuar como si todo fuera normal, como si no estuviera literalmente sudando de lo nervioso que estaba. Pero todo cambió cuando tomé el riesgo de darte la mano. Fue un pequeño paso, pero para mí lo significó todo, te estaba tomando de la mano. Sentir tu mano en la mía fue como si el mundo entero diera vueltas más rápido pero fuera igualmente de lento, sudaba de las manos aún más kajskajs.</p><p>Ese día también fuimos al Soriana, y mientras caminábamos por los pasillos, entre galletas y otras tonterías, sentí que algo dentro de mí me pedía más. Me armé de valor y te abracé por la espalda. En ese momento, lo juro, sentí que mi cuerpo iba a explotar. Me temblaba todo. Mi cabeza daba vueltas, y al mismo tiempo, no quería soltar jamás ese abrazo. Podía sentir que tú también estabas nerviosa, pero no te alejaste. Me quedé ahí, contigo, dándote besitos en la cabeza. Y, sin duda alguna, fue una de las cosas más hermosas que he vivido, mi niña.</p>",
+  "layout": "centrado",
   "secuencia": [
     {
       "tipo": "imagen",
-      "src": "media/fotos/estrella3-img1.jpg",
-      "alt": "El reel que lo inició todo"
+      "src": "media/fotos/primera salida.jpg",
+      "alt": "Tomados de la mano por primera vez"
     },
     {
       "tipo": "imagen",
-      "src": "media/fotos/estrella3-img2.jpg",
-      "alt": "Nuestra primera charla tras años"
-    },
-    {
-      "tipo": "imagen",
-      "src": "media/fotos/estrella3-img3.jpg",
-      "alt": "Sueños de familia juntos"
-    },
-    {
-      "tipo": "imagen",
-      "src": "media/fotos/estrella3-img4.jpg",
-      "alt": "Imaginando a nuestros hijos"
-    },
-    {
-      "tipo": "imagen",
-      "src": "media/fotos/estrella3-img5.jpg",
-      "alt": "El amor que renació"
+      "src": "media/fotos/primera-salida-2.jpg",
+      "alt": "El abrazo en Soriana"
     }
   ]
+},
+"6": {
+  "titulo": "Cuando te pedí ser mi novia",
+  "texto": "<p>Otra de las primeras salidas que tuvimos, corazón, fue aquella en la que salimos a caminar, fuimos de tienda en tienda, nos compramos un cafecito… y fuimos platicando de todo, sabiendo —sin ninguna duda ya— que queríamos estar juntos. Yo quería estar contigo, tú querías estar conmigo, y todo dentro de mí lo sabía con certeza.</p><p>Así que tomé una decisión. Al sentarnos a tomar ese café, en aquel Starbucks de esa plaza, sabía que tenía que hacer lo que sentía desde lo más profundo de mi corazón: pedirte para poder ser tu novio.</p><p>Estaba extremadamente nervioso. Me sudaban las manos, me temblaba el pecho, y aún así… no era miedo. Era algo más raro: no podía creer que una mujer tan hermosa, tan increíble, tan graciosa —y tan sexy, obviamente— estuviera ahí conmigo. Que también estuvieras enamorada de mí. Que me miraras así. Que sintieras lo mismo.</p><p>Antes y después de ese momento nos tomamos unas fotos, ¿te acuerdas? Y hoy, cuando las veo, sé que fue una de las mejores decisiones de mi vida.</p><p>Mientras te hablaba no pude evitar llorar un poquito. Era genuino. Era completo. Yo te amaba. Y hoy, en este presente, te amo todavía más. Más de lo que alguna vez creí que era posible. Pensaba que ese amor de entonces era ya lo más alto que se podía sentir… pero tú has hecho que siga creciendo.</p><p>Es por eso que, mi amor, quiero decirte que te amo. Que aunque apenas vayamos por la mitad de este viaje, no cambiaría absolutamente nada. Hace exactamente un año comenzaba todo esto… Y tú, ranita preciosa, eres el amor de mi vida.</p>",
+  "layout": "dos-columnas",
+  "secuencia": [
+      {
+        "tipo": "video",
+        "src": "https://www.youtube.com/embed/1aBqouSG-lw"
+      },
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/estrella6-img1.jpg",
+        "alt": "Jugando juntos por primera vez" 
+      },
+      {
+        "tipo": "video",
+        "src": "https://www.youtube.com/embed/ZVOy3yPhGxQ"
+      },
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/estrella1-img11.jpg",
+        "alt": "Primera conversación especial"
+      }
+  ]
+},
+"7": {
+  "titulo": "Lo que hemos aprendido",
+  "texto": "<p>Amor, este año que llevamos juntos no ha sido solo de momentos bonitos, también ha estado lleno de aprendizajes profundos. Y quiero hablar de eso con la misma ternura con la que te hablo siempre.</p><p>Cuando nos conocimos, no estábamos en nuestro mejor momento emocional. Tú estabas en un proceso muy importante: aprendiendo a estar completamente sola, a sostenerte por ti misma. Y yo, por mi parte, venía saliendo apenas de una etapa muy difícil, marcada por la depresión, por la ansiedad, por mucho dolor acumulado.</p><p>Nos encontramos así, un poco rotos, un poco vacíos, y sin darnos cuenta comenzamos a convertirnos el uno para el otro en más que un refugio… en todo. Éramos casa, calma, ternura, seguridad, compañía. Y lo éramos de verdad. Pero eso, con el paso del tiempo, también empezó a traernos algunas dificultades.</p><p>Había cosas que no sabíamos nombrar, que no sabíamos mirar. Cosas que nos hacían daño aunque nos amáramos con locura. Heridas que venían de antes, pero que nos tocaba enfrentar ahora, juntos. Y en medio de todo eso, jamás dejamos de elegirnos.</p><p>Hoy estamos atravesando un proceso muy importante. Uno que no ha sido fácil, pero que hemos elegido con amor, con respeto, y con la claridad de que queremos estar juntos. Que este vínculo vale la pena. Que este amor merece construirse con conciencia, con tiempo, con verdad.</p><p>Yo te amo, y te elijo. Y sé que todo lo que estamos trabajando hoy es también para cuidarnos mejor mañana.</p>",
+  "layout": "dos-columnas",
+  "secuencia": [
+    
+  ]
+},
+  "8": {
+    "titulo": "Pequeña pausa",
+    "texto": "<p>Antes de seguir con el viaje, mi pequeña princesa hermosa. Creo que me gustaría hacer una pequeña pausa, hacer un pequeño checkpoint en donde podamos descansar de leer tanto y simplemente recordar un poquito, juntos, ciertas llamadas, vídeos, cosas de nosotros.</p><p>Es por eso que aquí no va tanto texto y simplemente varios de los momentos que considero más hermosos de nosotros.</p>",
+    "layout": "centrado",
+    "secuencia": []
+  },
+  "9": {
+    "titulo": "Nuestra primera navidad juntos",
+    "texto": "<p>En esta estrellita quisiera hablar un poco de lo que fue nuestra primera navidad juntos, preciosa. Quisiera hablar de cómo fue uno de los momentos más hermosos que haya vivido, la verdad. Fue demasiado divertido hacer los juegos de aquella noche, organizar y convivir con toda tu familia, comer todos juntos, tomarnos una taza de ponche.</p><p>Una de las cosas que más recuerdo con amor es que, cuando estábamos jugando con la caja esta de cartón para pinchar globos, hubo uno que simplemente se resistía a explotar, por más que casi todos los hoyitos ya hubieran sido tapados, el desgraciado se resistía en reventar jajaja.</p><p>Pero la verdad, una de las cosas que más recuerdo es que, al final de la noche, ya cuando estaba por irme, simplemente nos acostamos en el sillón y decidimos pasar el resto de la noche juntos, abrazados, acostados, viendo como tu familia platicaba, se reía, y tú y yo ahí, simplemente existiendo pero juntitos. Te adoro, ranita.</p>",
+    "layout": "centrado",
+    "secuencia": []
+  },
+  "10": {
+    "titulo": "Salto espacio-temporal al presente",
+    "texto": "<p>Aquí vamos a tener que hacer un salto espacio-temporal al presente, pequeña.</p><p>Me gustaría hablar de lo que somos ahora, de lo que he aprendido de ti, el cómo me has cambiado la vida, el cómo me has hecho sentir tan amado, respetado, carajo, lo demasiado que te amo.</p><p>Hasta el día de hoy, corazón, no ha existido un solo día en donde no te piense, en donde no te extrañe, en donde no quiera sentir el calor de tu cuerpo, tus manos, el aroma de tu cabello, el tacto de tu piel, escuchar tu voz, verte a los ojos y simplemente quedarme ahí habitando hasta el final de mis días.</p><p>Yo pensaba que para amar a alguien iba a necesitar estar con esta persona todo el tiempo, y la verdad es que sí llegué a creer eso de nosotros. Pero el tiempo y la distancia contigo me han hecho ver, que cuando más lejos físicamente estamos, cuando menos tiempo podemos estar en llamada, tomados de la mano, abrazados… es cuando más te amo, es cuando más te anhelo, es cuando más te deseo.</p><p>El vernos, tocarnos, besarnos, después de no vernos aunque sea por 24 horas es como una explosión de todo lo que siento por ti, de todo el amor que te tengo, mi corazón.</p><p>Te quiero agradecer por este primer año juntos, por respetarme, por darme mi espacio, por tenerme paciencia, por ver en mí la luz que ni si quiera era yo capaz de ver, por tu tiempo, por tu vida, por querer vivirla conmigo.</p><p>Te amo, Natalia.</p>",
+    "layout": "centrado",
+    "secuencia": []
+  },
+  "11": {
+    "titulo": "El futuro",
+    "texto": "<p>Y bueno, obviamente si hemos hecho un viaje por el pasado y presente, está claro que nos toca el futuro, y aunque sea siempre incierto. Sí que tengo certeza de lo que queremos, de lo que yo quiero, de lo que tú quieres. Y sé que es estar juntos, tener una casita en el campo, lejos del ruido abrumador de la ciudad, tener una familia de 3 chamacos, una niña hermosa llamada Esperanza, y obvio sus hermanitos mayores, Simón y Nelson (que aunque todos sabemos que les van a intentar hacer bullying, poco te importa KASJKA).</p><p>Muchos gatitos, muchos perritos, y muchos muchos más otros animalitos (obvio un estanque para ranitas).</p><p>Sé que esto nos va a tomar mucho trabajo, pero la verdad es que sin duda es un camino que se hará increíblemente corto a tu lado, mi ranita. :3</p>",
+    "layout": "centrado",
+    "secuencia": []
+  }
 }
-}
+
+
+
