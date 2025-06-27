@@ -148,18 +148,32 @@
 },
 "7": {
   "titulo": "Lo que hemos aprendido",
-  "texto": "<p>Amor, este año que llevamos juntos no ha sido solo de momentos bonitos, también ha estado lleno de aprendizajes profundos. Y quiero hablar de eso con la misma ternura con la que te hablo siempre.</p><p>Cuando nos conocimos, no estábamos en nuestro mejor momento emocional. Tú estabas en un proceso muy importante: aprendiendo a estar completamente sola, a sostenerte por ti misma. Y yo, por mi parte, venía saliendo apenas de una etapa muy difícil, marcada por la depresión, por la ansiedad, por mucho dolor acumulado.</p><p>Nos encontramos así, un poco rotos, un poco vacíos, y sin darnos cuenta comenzamos a convertirnos el uno para el otro en más que un refugio… en todo. Éramos casa, calma, ternura, seguridad, compañía. Y lo éramos de verdad. Pero eso, con el paso del tiempo, también empezó a traernos algunas dificultades.</p><p>Había cosas que no sabíamos nombrar, que no sabíamos mirar. Cosas que nos hacían daño aunque nos amáramos con locura. Heridas que venían de antes, pero que nos tocaba enfrentar ahora, juntos. Y en medio de todo eso, jamás dejamos de elegirnos.</p><p>Hoy estamos atravesando un proceso muy importante. Uno que no ha sido fácil, pero que hemos elegido con amor, con respeto, y con la claridad de que queremos estar juntos. Que este vínculo vale la pena. Que este amor merece construirse con conciencia, con tiempo, con verdad.</p><p>Yo te amo, y te elijo. Y sé que todo lo que estamos trabajando hoy es también para cuidarnos mejor mañana.</p>",
-  "layout": "dos-columnas",
+  "texto": "<p>Amor, este año que llevamos juntos no a sido solo de momentos bonitos, también ha estado lleno de aprendizajes profundos. Y quiero hablar de eso con la misma ternura con la que te hablo siempre.</p><p>Cuando nos conocimos, no estábamos en nuestro mejor momento emocional. Tú estabas en un proceso muy importante: aprendiendo a estar completamente sola, a sostenerte por ti misma. Y yo, por mi parte, venía saliendo apenas de una etapa muy difícil, marcada por la depresión, por la ansiedad, por mucho dolor acumulado.</p><p>Nos encontramos así, un poco rotos, un poco vacíos, y sin darnos cuenta comenzamos a convertirnos el uno para el otro en más que un refugio… en todo. Éramos casa, calma, ternura, seguridad, compañía. Y lo éramos de verdad. Pero eso, con el paso del tiempo, también empezó a traernos algunas dificultades.</p><p>Había cosas que no sabíamos nombrar, que no sabíamos mirar. Cosas que nos hacían daño aunque nos amáramos con locura. Heridas que venían de antes, pero que nos tocaba enfrentar ahora, juntos. Y en medio de todo eso, jamás dejamos de elegirnos.</p><p>Hoy estamos atravesando un proceso muy importante. Uno que no ha sido fácil, pero que hemos elegido con amor, con respeto, y con la claridad de que queremos estar juntos. Que este vínculo vale la pena. Que este amor merece construirse con conciencia, con tiempo, con verdad.</p><p>Yo te amo, y te elijo. Y sé que todo lo que estamos trabajando hoy es también para cuidarnos mejor mañana.</p>",
+  "layout": "centrado",
   "secuencia": [
     
   ]
 },
   "8": {
-    "titulo": "Pequeña pausa",
-    "texto": "<p>Antes de seguir con el viaje, mi pequeña princesa hermosa. Creo que me gustaría hacer una pequeña pausa, hacer un pequeño checkpoint en donde podamos descansar de leer tanto y simplemente recordar un poquito, juntos, ciertas llamadas, vídeos, cosas de nosotros.</p><p>Es por eso que aquí no va tanto texto y simplemente varios de los momentos que considero más hermosos de nosotros.</p>",
-    "layout": "centrado",
-    "secuencia": []
-  },
+  "titulo": "Pequeña pausa",
+  "texto": "<p>Antes de seguir con el viaje, mi pequeña princesa hermosa. Creo que me gustaría hacer una pequeña pausa, hacer un pequeño checkpoint en donde podamos descansar de leer tanto y simplemente recordar un poquito, juntos, ciertas llamadas, vídeos, cosas de nosotros.</p><p>Es por eso que aquí no va tanto texto y simplemente varios de los momentos que considero más hermosos de nosotros.</p>",
+  "layout": "horizontal",
+  "secuencia": [
+    {
+      "tipo": "video",
+      "src": "https://www.youtube.com/embed/joT43tnyvPk"
+    },
+    {
+      "tipo": "video",
+      "src": "https://www.youtube.com/embed/shUOukrwIaM"
+    },
+    {
+      "tipo": "video",
+      "src": "https://www.youtube.com/embed/C6INGLffyBI"
+    }
+  ]
+}
+,
   "9": {
     "titulo": "Nuestra primera navidad juntos",
     "texto": "<p>En esta estrellita quisiera hablar un poco de lo que fue nuestra primera navidad juntos, preciosa. Quisiera hablar de cómo fue uno de los momentos más hermosos que haya vivido, la verdad. Fue demasiado divertido hacer los juegos de aquella noche, organizar y convivir con toda tu familia, comer todos juntos, tomarnos una taza de ponche.</p><p>Una de las cosas que más recuerdo con amor es que, cuando estábamos jugando con la caja esta de cartón para pinchar globos, hubo uno que simplemente se resistía a explotar, por más que casi todos los hoyitos ya hubieran sido tapados, el desgraciado se resistía en reventar jajaja.</p><p>Pero la verdad, una de las cosas que más recuerdo es que, al final de la noche, ya cuando estaba por irme, simplemente nos acostamos en el sillón y decidimos pasar el resto de la noche juntos, abrazados, acostados, viendo como tu familia platicaba, se reía, y tú y yo ahí, simplemente existiendo pero juntitos. Te adoro, ranita.</p>",
