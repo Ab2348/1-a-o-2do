@@ -228,7 +228,12 @@
     "audio": "media/canciones/algo-contigo.mp3",
     "texto": "<p>Y bueno, obviamente si hemos hecho un viaje por el pasado y presente, está claro que nos toca el futuro, y aunque sea siempre incierto. Sí que tengo certeza de lo que queremos, de lo que yo quiero, de lo que tú quieres. Y sé que es estar juntos, tener una casita en el campo, lejos del ruido abrumador de la ciudad, tener una familia de 3 chamacos, una niña hermosa llamada Esperanza, y obvio sus hermanitos mayores, Simón y Nelson (que aunque todos sabemos que les van a intentar hacer bullying, poco te importa KASJKA).</p><p>Muchos gatitos, muchos perritos, y muchos muchos más otros animalitos (obvio un estanque para ranitas).</p><p>Sé que esto nos va a tomar mucho trabajo, pero la verdad es que sin duda es un camino que se hará increíblemente corto a tu lado, mi ranita. :3</p>",
     "layout": "centrado",
-    "secuencia": []
+    "secuencia": [
+      {
+        "tipo": "imagen",
+        "src": "media/fotos/estrella1-img2.png"
+      }
+    ]
   },
   "12": {
     "titulo": "Feliz aniversario, mi ranita luminosa",
