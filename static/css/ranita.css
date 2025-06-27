@@ -147,7 +147,7 @@ a {
 
 
 /* ===========================
-   Layout 3: Horizontal
+   Layout 3: Horizontal - VERSIÓN GALERÍA DE FILAS Y COLUMNAS
    =========================== */
 #contenedor-contenido.layout-horizontal .layout-horizontal {
   display: grid;
@@ -155,51 +155,115 @@ a {
   gap: 2rem;
   max-width: 1200px;
   margin: 2rem auto;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
+
+#contenedor-contenido.layout-horizontal .texto-arriba {
+  width: 100%;
+}
+
 #contenedor-contenido.layout-horizontal .texto-arriba .lienzo-ranita.texto-horizontal {
   background-color: rgba(255,255,255,0.9);
   border-radius: 2rem;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   padding: 2.5rem;
   width: 100%;
+  max-width: 100%;
   color: #3c1919;
+  box-sizing: border-box;
 }
+
 #contenedor-contenido.layout-horizontal .texto-arriba .texto-horizontal p {
   font-size: 1.1rem;
   text-align: justify;
   line-height: 1.8;
 }
+
 #contenedor-contenido.layout-horizontal .texto-arriba .texto-horizontal em {
   color: #6c4d96;
 }
+
 #contenedor-contenido.layout-horizontal .texto-arriba .texto-horizontal strong {
   color: #222;
   font-weight: bold;
 }
+
+/* Contenedor multimedia como galería */
 #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
   gap: 2rem;
   width: 100%;
-  margin-top: 2.5rem;
 }
+
 #contenedor-contenido.layout-horizontal .media-horizontal img,
 #contenedor-contenido.layout-horizontal .media-horizontal iframe {
   width: 100%;
-  height: auto;
+  height: 200px; /* Altura fija */
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
+#contenedor-contenido.layout-horizontal .media-horizontal iframe {
+  height: 200px;
+}
+
+/* Efecto hover */
+#contenedor-contenido.layout-horizontal .media-horizontal img:hover,
+#contenedor-contenido.layout-horizontal .media-horizontal iframe:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Responsive: ajustar columnas según tamaño de pantalla */
+@media (max-width: 1024px) {
+  #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets grandes */
+  }
+}
+
+@media (max-width: 768px) {
+  #contenedor-contenido.layout-horizontal .layout-horizontal {
+    padding: 0;
+  }
+  
+  #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets pequeñas y móviles grandes */
+    gap: 1.5rem;
+  }
+  
+  #contenedor-contenido.layout-horizontal .media-horizontal img,
+  #contenedor-contenido.layout-horizontal .media-horizontal iframe {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  #contenedor-contenido.layout-horizontal .texto-arriba .lienzo-ranita.texto-horizontal {
+    padding: 1.5rem;
+  }
+  
+  #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: 1rem;
+  }
+  
+  #contenedor-contenido.layout-horizontal .media-horizontal img,
+  #contenedor-contenido.layout-horizontal .media-horizontal iframe {
+    height: 140px;
+  }
+}
 
 
 
 /* Tamaño uniforme para imagen y video */
 .secuencia-contenido img,
 .secuencia-contenido iframe {
-  aspect-ratio: 16 / 9;
   height: auto;
-  max-height: 300px;
   object-fit: cover;
 }
 
