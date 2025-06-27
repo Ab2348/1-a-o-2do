@@ -147,7 +147,7 @@ a {
 
 
 /* ===========================
-   Layout 3: Horizontal - VERSIÓN MEJORADA Y CENTRADA
+   Layout 3: Horizontal - VERSIÓN GALERÍA DE FILAS Y COLUMNAS
    =========================== */
 #contenedor-contenido.layout-horizontal .layout-horizontal {
   display: grid;
@@ -156,14 +156,12 @@ a {
   max-width: 1200px;
   margin: 2rem auto;
   width: 100%;
-  padding: 0 1rem; /* Añadido para espacio en los bordes */
-  box-sizing: border-box; /* Asegura que el padding no añada ancho extra */
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 #contenedor-contenido.layout-horizontal .texto-arriba {
   width: 100%;
-  display: flex;
-  justify-content: center; /* Centra el lienzo horizontalmente */
 }
 
 #contenedor-contenido.layout-horizontal .texto-arriba .lienzo-ranita.texto-horizontal {
@@ -171,10 +169,10 @@ a {
   border-radius: 2rem;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   padding: 2.5rem;
-  width: 100%; /* Ocupa todo el ancho disponible */
-  max-width: 100%; /* Evita que crezca más allá del contenedor */
+  width: 100%;
+  max-width: 100%;
   color: #3c1919;
-  box-sizing: border-box; /* Incluye padding en el ancho */
+  box-sizing: border-box;
 }
 
 #contenedor-contenido.layout-horizontal .texto-arriba .texto-horizontal p {
@@ -192,65 +190,49 @@ a {
   font-weight: bold;
 }
 
-/* Contenedor multimedia mejorado con centrado */
-#contenedor-contenido.layout-horizontal .media-abajo {
-  width: 100%;
-  overflow: hidden; /* Contiene el desbordamiento del grid horizontal */
-}
-
+/* Contenedor multimedia como galería */
 #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(180px, 1fr); /* Tamaño flexible con mínimo de 180px */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
   gap: 2rem;
-  overflow-x: auto; /* Permite desplazamiento horizontal si hay muchos elementos */
-  padding-bottom: 1rem; /* Espacio para el scroll */
-  scrollbar-width: thin; /* Estilo moderno para scrollbar */
-  scrollbar-color: #6c4d96 transparent;
-  width: max-content; /* Permite que el grid crezca según contenido */
-  max-width: 100%; /* Pero nunca más ancho que el contenedor padre */
-  margin: 0 auto; /* Centra el contenedor de multimedia */
-}
-
-/* Estilizar la barra de desplazamiento para navegadores WebKit */
-#contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal::-webkit-scrollbar {
-  height: 8px;
-}
-
-#contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal::-webkit-scrollbar-thumb {
-  background-color: #6c4d96;
-  border-radius: 4px;
+  width: 100%;
 }
 
 #contenedor-contenido.layout-horizontal .media-horizontal img,
 #contenedor-contenido.layout-horizontal .media-horizontal iframe {
-  width: 100%; /* Ahora ocupa el 100% del contenedor de grid */
-  height: 200px; /* Altura fija para mantener uniformidad */
+  width: 100%;
+  height: 200px; /* Altura fija */
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  object-fit: cover; /* Mantiene la relación de aspecto */
-  transition: transform 0.3s ease; /* Suave animación al pasar el ratón */
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 #contenedor-contenido.layout-horizontal .media-horizontal iframe {
-  height: 200px; /* Mantenemos altura uniforme para videos también */
+  height: 200px;
 }
 
-/* Efecto hover para mejor interacción */
+/* Efecto hover */
 #contenedor-contenido.layout-horizontal .media-horizontal img:hover,
 #contenedor-contenido.layout-horizontal .media-horizontal iframe:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Ajustes para pantallas pequeñas */
+/* Responsive: ajustar columnas según tamaño de pantalla */
+@media (max-width: 1024px) {
+  #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets grandes */
+  }
+}
+
 @media (max-width: 768px) {
   #contenedor-contenido.layout-horizontal .layout-horizontal {
-    padding: 0; /* Eliminamos padding lateral en móviles */
+    padding: 0;
   }
   
   #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
-    grid-auto-columns: minmax(140px, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets pequeñas y móviles grandes */
     gap: 1.5rem;
   }
   
@@ -260,14 +242,13 @@ a {
   }
 }
 
-/* Ajustes para pantallas muy pequeñas */
 @media (max-width: 480px) {
   #contenedor-contenido.layout-horizontal .texto-arriba .lienzo-ranita.texto-horizontal {
     padding: 1.5rem;
   }
   
   #contenedor-contenido.layout-horizontal .media-abajo .secuencia-contenido.media-horizontal {
-    grid-auto-columns: minmax(120px, 1fr);
+    grid-template-columns: 1fr; /* 1 columna en móviles */
     gap: 1rem;
   }
   
